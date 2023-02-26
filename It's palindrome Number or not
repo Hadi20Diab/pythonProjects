@@ -1,0 +1,18 @@
+def reverseNumber(number):
+    
+    copy_number=number
+    reversed_number=0
+    
+    while number>0:
+        firstNumber=number%10                           #to get the first number 
+        reversed_number=reversed_number*10+firstNumber  #make the getted letter at the left
+        number=number//10                               #remove the first number 
+    
+    if reversed_number==copy_number:
+        print(copy_number," is palindrome. ")
+    else:
+        print(copy_number," is not palindrome. ")
+
+print("-"*10,"Welcome","-"*10)
+Number=int(input("Please enter you number to check it's pandorom number or not : "))
+reverseNumber(Number)
